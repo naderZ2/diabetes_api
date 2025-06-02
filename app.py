@@ -16,6 +16,10 @@ features = [
     'smoking_history_never', 'smoking_history_not current'
 ]
 
+@app.route('/')
+def home():
+    return {"message": "API is running"}
+
 @app.route('/predict', methods=['POST'])
 def predict():
     data = request.get_json(force=True)
