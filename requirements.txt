@@ -2,3 +2,4 @@ flask
 scikit-learn
 joblib
 numpy
+pip freeze > requirements.txt
