@@ -24,13 +24,16 @@ def home():
 def predict():
     data = request.get_json(force=True)
     try:
+
         input_data = [data[feature] for feature in features]
         input_array = np.array(input_data).reshape(1, -1)
         input_scaled = scaler.transform(input_array)
         prediction = model.predict(input_scaled)[0]
+
+
+
+
         return jsonify({'prediction': int(prediction)})
     except KeyError as e:
         return jsonify({'error': f'Missing feature: {e}'}), 400
 
-# if __name__ == '__main__':
-#     app.run(debug=True)
