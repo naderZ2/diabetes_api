@@ -10,4 +10,5 @@ protobuf
 Werkzeug
 itsdangerous
 Jinja2
-tensorflow
+tensorflow-cpu==2.15.0
+
