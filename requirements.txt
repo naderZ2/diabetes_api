@@ -10,3 +10,4 @@ protobuf
 Werkzeug
 itsdangerous
 Jinja2
+tensorflow
